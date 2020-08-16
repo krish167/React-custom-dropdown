@@ -21,7 +21,7 @@ const AppDropDown = (props) => {
 
         // update filterd souce to the state
         let sourceData = props.source;
-        if(filterText != "" && filterText != undefined){
+        if(filterText !== "" && filterText !== undefined){
             sourceData = sourceData.filter((item) => {
             let itemName = item.title.toLowerCase();
             return itemName.indexOf(filterText.toLowerCase()) !== -1
@@ -54,10 +54,9 @@ const AppDropDown = (props) => {
  
     // add new list item
     function addNewListItem(newItem){
-        if(newItem!=""){
+        if(newItem!==""){
             let sourceData = props.source; 
             // update the new item on dropdown source
-            let filteredSource=[];
             var newId = props.source.length + 1;
             let newItemObj = {
                 id: newId,
@@ -91,7 +90,7 @@ const AppDropDown = (props) => {
                             onChange={(e) => onChangeInput(e.target.value)} />
                     </div>
                     <ul className="dd-list-items">
-                        {(displaySource.length == 0) && 
+                        {(displaySource.length === 0) && 
                             <div>
                                 <span className="widget__message">
                                     "{searchedValue}" not found
