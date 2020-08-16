@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 const AppDropDown = (props) => {
-    console.log("source count " + props.source.length)
+
     const [showDrpDwnList, togglePanel] = useState(false);
     const [isShowMoreOn, setIsShowMoreOn] = useState(false);
     const [displaySource, setDisplaySource] = useState(); 
@@ -54,8 +54,6 @@ const AppDropDown = (props) => {
  
     // add new list item
     function addNewListItem(newItem){
-        console.log(searchedValue);
-        console.log(setSearchedValue);
         if(newItem!=""){
             let sourceData = props.source; 
             // update the new item on dropdown source
